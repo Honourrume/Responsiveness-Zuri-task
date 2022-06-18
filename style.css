@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.google.com/specimen/Poppins');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' sans-serif;
+    background-image: url(bg-intro-desktop.png) ;
+    background-color: hsl(0, 100%, 74%);
+}
+
+.container{
+    display: flex;
+    margin: 80px auto 70px;
+    width: 70%;
+    height: 570px;
+}
+.first{
+    width: 50%
+}
+
+h1{
+    color: hsl(0, 71%, 97%);
+    margin-top: 170px;
+    font-weight: 700;
+    font-size: 60px;
+}
+.first-container p{
+    color: hsl(0, 71%, 97%);
+    line-height: 20px;
+    margin-right: 60px;
+}
+
+.first-item, .second-item{
+    border-radius: 8px;
+}
+
+.first-item{
+    text-align: center;
+    color: white;
+    padding: 4px;
+    font-size: 0.87em;
+    /* margin-top: 10px; */
+    margin-bottom: 7px;
+    border-bottom: 5px rgba(252, 71, 58, 0.918) solid;
+    background-color: hsl(248, 32%, 49%);
+    
+    
+}
+.first-item span{
+    font-weight: bold;
+}
+
+.second-item{
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100%;
+    border-bottom: 8px rgba(250, 17, 0, 0.7) solid;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0px 0px;
+    width: 85%;
+    margin: 25px auto 0px;
+}
+input, button{
+    border-radius: 5px;
+}
+input{
+    height: 45px;
+    border: 1px grey solid;
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 0.87em;
+    font-weight: 500;
+    color: hsl(249, 10%, 26%);
+    background-image: none;
+    transition: background-image 4s 2s ease-in, border-color .5s .5s linear, border-width .5s 1s;
+}
+input::placeholder{
+    color: hsl(249, 10%, 26%);
+    font-size: 1em;
+    font-weight: 500;
+}
+input:invalid{
+    background-image:url(icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+    border-color: hsl(0, 100%, 74%);
+}
+input:hover, input:active, input:focus{
+    border: 1px solid grey;
+}
+input:valid{
+    border-width: 2px;
+}
+.errormsg{
+    padding: 8px 0px;
+    margin: 0px;
+    font-size: 0.8em;
+    text-align: right;
+    visibility: visible;
+    color: hsl(0, 100%, 74%);
+}
+
+.input1:focus ~ .errormsg, .input1:valid ~ .errormsg{
+    visibility: hidden;
+}
+
+.input2:focus ~ .errormsg, .input2:valid ~ .errormsg{
+    visibility: hidden;
+}
+
+.input3:valid ~ .errormsg{
+    visibility: hidden;
+}
+
+.input4:focus ~ .errormsg, .input4:valid ~ .errormsg{
+    visibility: hidden;
+}
+button{
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    outline: none;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    padding: 18px;
+    border-bottom: 3px rgba(12, 146, 12, 0.3) solid;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(10, 209, 93);
+    color: white;
+}
+
+.terms{
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 0.8em;
+    color: hsl(246, 25%, 77%);
+}
+.second-item a:link{
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(0, 100%, 74%) ;
+}
+.second-item a:visited{
+    color: hsl(0, 100%, 74%) ;
+}
+.second-item a:hover{
+    color: red;
+}
+
+/* Responsiveness */
+@media  screen and (max-width:912px) {
+    body{
+        background-image: url("bg-intro-mobile.png");
+    }
+    .container{
+        width: 85%;
+        height: fit-content;
+        margin: 90px auto 60px;
+        flex-direction: column;
+    }
+    .first{
+        width: 100%;
+    }
+    h1{
+        margin-top: 0;
+    }
+    .first-container{
+        text-align: center;
+    }
+    .first-container p{
+        margin-right: 0;
+    }
+    .first-item{
+        padding: 8px 50px;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    .second-item{
+        height: 520px;
+    }
+    .terms{
+        letter-spacing: 0.07em;
+        padding: 10px 25px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="(https://fonts.google.com/specimen/Poppins)">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="first first-container">
+            <h1>Learn to code by watching others</h1>
+            <p>See how experienced developers solve problems in real-time
+                Watching scripted tutorials is great, but understanding how developers 
+                think is valuable.
+            </p>
+        </div>
+        <div class="first second-container">
+            <div class="first-item">
+                <p><span class="try">Try it free 7 days</span> then $20/mo. thereafter</p>
+            </div>
+            <div class="second-item">
+                <form>
+                    <div class="forminput">
+                        <input class="input1"type="text" id="firstname" placeholder="First name" minlength="2" maxlength="30" required>
+                        <p class="errormsg"><em>Last Name cannot be empty</em></p>
+                    </div>
+
+                    <div class="forminput">
+                        <input class="input2" type="text" id="lastname" placeholder="Last Name" minlength="2" maxlength="30" required>
+                        <p class="errormsg"><em>Last Name cannot be empty</em></p>
+                    </div>
+
+                    <div class="forminput">
+                        <input class="input3" type="email" id="mail" placeholder="Email Address" required>
+                        <p class="errormsg"><em>Looks like this is not an email</em></p>
+                    </div>
+
+                    <div class="forminput">
+                        <input class="input4" type="password" id="password" placeholder="Password" required>
+                        <p class="errormsg"><em>Password cannot be empty</em></p>
+                    </div>
+
+                    <button type="submit">CLAIM YOUR FREE TRIAL</button>
+                </form>
+                <p class="terms">By clicking the button, you are agreeing
+                    to our <a href="#">Terms and Services</a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
